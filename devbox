@@ -1,0 +1,25 @@
+#!/bin/bash
+
+case "$1" in
+  install)
+    bash install.sh
+    ;;
+  backup)
+    echo "Backup belum dibuat"
+    ;;
+  deploy)
+    echo "Deploy belum dibuat"
+    ;;
+  update)
+    echo "Update belum dibuat"
+    ;;
+  *)
+    echo "======================"
+    echo " DEVBOX CLI"
+    echo "======================"
+    echo "devbox install"
+    echo "devbox backup"
+    echo "devbox deploy"
+    echo "devbox update"
+    ;;
+esac
