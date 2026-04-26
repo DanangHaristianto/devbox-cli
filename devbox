@@ -2,24 +2,23 @@
 
 case "$1" in
   install)
-    bash install.sh
+    echo "DevBox sudah terinstall"
     ;;
   backup)
-    echo "Backup belum dibuat"
+    git add .
+    git commit -m "backup $(date)"
+    git push origin main
     ;;
   deploy)
-    echo "Deploy belum dibuat"
+    git add .
+    git commit -m "deploy update"
+    git push origin main
     ;;
   update)
-    echo "Update belum dibuat"
+    cd $HOME/devbox-cli && git pull origin main
     ;;
   *)
-    echo "======================"
-    echo " DEVBOX CLI"
-    echo "======================"
-    echo "devbox install"
-    echo "devbox backup"
-    echo "devbox deploy"
-    echo "devbox update"
+    echo "DevBox CLI"
+    echo "backup | deploy | update"
     ;;
 esac
